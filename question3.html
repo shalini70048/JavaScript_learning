@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Create a web app which would take two inputs. It would also have 4 buttons: +, -, x /. Based on the button clicked perform the operation on the two inputs. You can do this in React or vanillaJS based on your choice. -->
+
+    <input id="first" placeholder="Enter the first number">
+    <input id="second" placeholder="Enter the second number">
+    <button id="sum">sum</button>
+    <button id="sub">subtract</button>
+    <button id="mul">multiply</button>
+    <button id="div">division</button>
+    <h1>sum:<span id="sumOutput"></span></h1>
+    <h1>subtract:<span id="subOutput"></span></h1>
+    <h1>multiplication:<span id="mulOutput"></span></h1>
+    <h1>division:<span id="divOutput"></span></h1>
+
+    <script>
+
+        const firstName = document.querySelector("#first")
+        const secondName = document.querySelector("#second")
+        const sumBtn = document.querySelector("#sum")
+        const subBtn = document.querySelector("#sub")
+        const mulBtn = document.querySelector("#mul")
+        const divBtn = document.querySelector("#div")
+
+        sumBtn.addEventListener('click', () => {
+            console.log('sum');
+            const firstValue = Number(firstName.value);
+
+            const secondValue = Number(secondName.value);
+            if (firstValue && secondValue) {
+                let sum = firstValue + secondValue
+
+                console.log(sum)
+                sumOutput.innerHTML = sum;
+            }
+            else {
+                alert("Enter the first & second value")
+            }
+
+
+        })
+
+        subBtn.addEventListener('click', () => {
+            console.log('subtract');
+            const firstValue = Number(firstName.value);
+
+            const secondValue = Number(secondName.value);
+            let sub = firstValue - secondValue
+            console.log(sub)
+            subOutput.innerHTML = sub;
+
+        })
+
+        mulBtn.addEventListener('click', () => {
+            console.log('multiply');
+            const firstValue = Number(firstName.value);
+
+            const secondValue = Number(secondName.value);
+            let mul = firstValue * secondValue
+            console.log(mul)
+            mulOutput.innerHTML = mul;
+
+        })
+
+        divBtn.addEventListener('click', () => {
+            console.log('division');
+            const firstValue = Number(firstName.value);
+
+            const secondValue = Number(secondName.value);
+            let div = firstValue / secondValue
+            console.log(div)
+            divOutput.innerHTML = div;
+
+
+        })
+
+
+
+
+
+    </script>
+
+
+</body>
+
+</html>

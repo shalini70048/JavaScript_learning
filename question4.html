@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input id="text" type="text" placeholder="Enter the text">
+    <button id="decButton"> - </button>
+    <button id="incButton"> + </button>
+
+    <script>
+
+        const inputTxt = document.querySelector("#text")
+        const incBtn = document.querySelector("#incButton")
+        const decBtn = document.querySelector("#decButton")
+
+        let fontSize = 16;
+
+        incBtn.addEventListener('click', () => {
+
+            fontSize += 2;
+            inputTxt.style.fontSize = `${fontSize}px`;
+            console.log("shalu");
+
+        })
+
+        decBtn.addEventListener('click', () => {
+            console.log(fontSize)
+
+            if (fontSize <= 0) {
+                fontSize = 16
+            }
+            else { fontSize -= 2 }
+
+
+            inputTxt.style.fontSize = `${fontSize}px`;
+
+
+
+
+        })
+    </script>
+</body>
+
+</html>
