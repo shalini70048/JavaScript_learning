@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Image on Button Click</title>
+</head>
+<body>
+
+    <img id="img1" src="https://picsum.photos/id/237/200/300" alt="Image 1">
+    <img id="img2" src="https://picsum.photos/seed/picsum/200/300" alt="Image 2">
+
+    <br><br>
+
+    <button id="Btn1"> Image1</button>
+    <button id="Btn2"> Image2</button>
+
+    <script>
+        const firstImg = document.querySelector("#img1");
+        const secondImg = document.querySelector("#img2");
+        const firstBtn = document.querySelector("#Btn1");
+        const secondBtn = document.querySelector("#Btn2");
+
+        
+        secondImg.style.display = "none";
+
+        firstBtn.addEventListener("click", () => {
+            firstImg.style.display = "block";  
+            secondImg.style.display = "none";  
+        });
+
+        secondBtn.addEventListener("click", () => {
+            firstImg.style.display = "none";  
+            secondImg.style.display = "block";  
+        });
+    </script>
+
+</body>
+</html>
