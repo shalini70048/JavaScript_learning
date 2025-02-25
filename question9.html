@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add & Remove List Items</title>
+    
+</head>
+<body>
+
+    <button id="addItem">Add Item</button>
+    <button id="removeItem">Remove Item</button>
+    
+    <ul id="itemList"></ul>
+
+    <script>
+        
+        const addItemBtn = document.getElementById("addItem");
+        const removeItemBtn = document.getElementById("removeItem");
+        const itemList = document.getElementById("itemList");
+
+        
+        addItemBtn.addEventListener("click", ()=> {
+            const li = document.createElement("li");
+            li.textContent = "New Item " + (itemList.children.length + 1);
+            itemList.appendChild(li);
+        });
+
+        
+        removeItemBtn.addEventListener("click",  () => {
+            if (itemList.lastChild) {
+                itemList.removeChild(itemList.lastChild);
+            }
+        });
+    </script>
+
+</body>
+</html>
